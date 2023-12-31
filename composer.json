@@ -1,0 +1,43 @@
+{
+    "name": "djohnnyboy/poweredblog",
+    "description": "A markdown powered blog for Laravel framework.", 
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "djohnnyboy",
+            "email": "djohn_oliver@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "erusev/parsedown": "^1.7",
+        "ext-json": "*"
+      },
+    "require-dev": {
+        "orchestra/testbench": "^7.38",
+        "laravel/legacy-factories": "^1.0.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Djohnnyboy\\Poweredblog\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Djohnnyboy\\Poweredblog\\": "tests/"
+        },
+        "classmap": [
+            "tests",
+            "database/"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Djohnnyboy\\Poweredblog\\BlogBaseServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use Djohnnyboy\Poweredblog\Facades\Blog;
+
+class BlogServiceProvider extends ServiceProvider {
+
+	public function boot(){
+
+		Blog::fields($this->registerFields());
+	}
+
+	public function register(){
+		
+	}
+
+	protected function registerFields(){
+		
+		return [
+			//
+		];
+	}
+}
