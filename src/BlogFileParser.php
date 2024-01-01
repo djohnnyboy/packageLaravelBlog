@@ -54,18 +54,10 @@ class BlogFileParser {
 		foreach ($this->data as $field => $value) {	
 
 			$class = $this->getField(Str::title($field));
-
-			//$class = 'Djohnnyboy\\Poweredblog\\Fields\\' . Str::title($field);
-			//dd(class_exists($class));
-			/*
+			
 			if (! class_exists($class) && ! method_exists($class, 'process')) {
 				$class = 'Djohnnyboy\\Poweredblog\\Fields\\Extra';
-			}
-			*/
-
-
-			$class = 'Djohnnyboy\\Poweredblog\\Fields\\Extra';
-		
+			}		
 
 			$this->data = array_merge(
 				$this->data, 
